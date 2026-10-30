@@ -107,7 +107,10 @@ plt.title('Original Image')
 plt.show()
 ```
 <img width="324" height="434" alt="image" src="https://github.com/user-attachments/assets/fffcd150-fdad-445b-a601-61c3c14dc159" />
+
 ## Histogram Equalization for Color Images
+
+
 ```
 img = cv2.imread('profile.png', cv2.IMREAD_COLOR)
 img_hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
@@ -115,10 +118,13 @@ img_hsv[:,:,2] = cv2.equalizeHist(img_hsv[:, :, 2])
 img_eq = cv2.cvtColor(img_hsv, cv2.COLOR_HSV2BGR)
 plt.imshow(img_eq[:,:,::-1]); plt.title('Equalized Image');plt.show()
 ```
+
 <img width="324" height="434" alt="image" src="https://github.com/user-attachments/assets/d5531fe0-e1a2-4839-b9fc-878afd37998a" />
+
 ```
 plt.hist(img_eq.ravel(),256,range = [0, 256]); plt.title('Histogram Equalized');plt.show()
 ```
+
 <img width="570" height="434" alt="image" src="https://github.com/user-attachments/assets/790bb2db-48c9-49b8-9bb2-7f24a2bb1324" />
 
 ```
